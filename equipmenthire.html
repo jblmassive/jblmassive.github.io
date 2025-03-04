@@ -19,16 +19,18 @@
     <!-- styling for hire cost table -->
     <style>
         body {
-            background-color: black;
-            color: white;
+            background: url('your-image.jpg') no-repeat center center fixed;
+            background-size: cover;
             font-family: Arial, sans-serif;
+            color: white;
             text-align: center;
         }
         table {
             width: auto;
             margin: 20px auto;
             border-collapse: collapse;
-            background-color: rgba(255, 255, 0, 0.2); /* Translucent yellow */
+            background-color: rgba(0, 0, 0, 0.8); /* Translucent black */
+            backdrop-filter: blur(5px); /* Smooth blur effect */
         }
         th, td {
             border: 1px solid yellow;
@@ -37,7 +39,7 @@
             min-width: 150px;
         }
         th {
-            background-color: rgba(255, 255, 0, 0.5); /* Slightly darker yellow */
+            background-color: rgba(255, 255, 0, 0.6); /* Slightly transparent yellow */
             color: black;
         }
         .category {
