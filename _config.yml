@@ -1,3 +1,4 @@
 theme: jekyll-theme-hacker
+layout: default
 title: Title
 description: Desc
