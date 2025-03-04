@@ -28,7 +28,7 @@
         table {
             margin: 20px auto;
             width: auto;
-            table-layout: auto;
+            table-layout: fixed;
             overflow-x: auto;
           
             border-collapse: collapse;
@@ -41,6 +41,7 @@
         @media (max-width: 768px) {
             th, td {
               font-size: 14px; /* Smaller font for small screens */
+              padding: 5px; /* Reduce padding on small screens */
             }
         }
         th, td {
