@@ -5,13 +5,35 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- scaling responsiveness for small devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- links to load CSS -->	 
+    <link href="css/ui.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Loads nav icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
 
 {% seo %}
   </head>
 
-  <body>
+   <body>
+        
+        <!-- everything goes inside this div -->
+        <div class="main" id="mainid">
+            
+            <img class ="jbllogo" src="imgs/jbllogo.png" alt="JBL Logo"/>
+           
+         
+            <div class="nav" id="navid">
+                
+                <a href="home.html"><i class="fa fa-home"></i> Home</a>
+                <a href="audiovisualdj.html"><i class="fa fa-bars"></i> Audio, Visual, DJ</a>
+                <a href="music.html"><i class="fa fa-ticket"></i> Music</a>
 
     <header>
       <div class="container">
