@@ -39,7 +39,7 @@
     font-style: normal;
     background-color: rgba(255,255,255,0.05);
     overflow: hidden;
-    font-size: clamp(24px, 4vw, 60px); /* Responsive font size */
+    font-size: clamp(24px, 4vw, 40px); /* Responsive font size */
 }
 
 .nav a {
