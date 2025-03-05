@@ -1,8 +1,9 @@
-<head>
-  <meta http-equiv='refresh' content='0; URL=https://www.junglebooklegion.com/home.html'> 
-</head>
+---
+permalink: /
+redirect_to: "https://www.junglebooklegion.com/home.html"
+---
 
 theme: jekyll-theme-hacker
 layout: default
-title: Title
-description: Desc
+title: Jungle Book Legion
+description: base domain, check out our github
