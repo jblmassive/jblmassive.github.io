@@ -4,10 +4,16 @@
         padding: 5px; /* Reduce padding on small screens */
     }
 
+    @font-face {
+    font-family: 'Philly Sans';
+    src: url('/fonts/PhillySans-Regular.woff') format('woff'),
+         url('/fonts/PhillySans-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
     body {
-        background: url('your-image.jpg') no-repeat center center fixed;
         background-size: cover;
-        font-family: Arial, sans-serif;
+        font-family: 'Philly Sans';
         color: white;
         text-align: center;
     }
@@ -15,7 +21,7 @@
     table {
         background: url('your-image.jpg') no-repeat center center fixed;
         background-size: cover;
-        font-family: Arial, sans-serif;
+        font-family: 'Philly Sans';
         color: white;
         text-align: center;
         
