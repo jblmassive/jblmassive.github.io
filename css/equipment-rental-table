@@ -1,3 +1,8 @@
+        @media (max-width: 768px) {
+            th, td {
+              font-size: 14px; /* Smaller font for small screens */
+              padding: 5px; /* Reduce padding on small screens */
+            }
 
        body {
             background: url('your-image.jpg') no-repeat center center fixed;
@@ -21,11 +26,7 @@
 
         }
 
-        @media (max-width: 768px) {
-            th, td {
-              font-size: 14px; /* Smaller font for small screens */
-              padding: 5px; /* Reduce padding on small screens */
-            }
+        
         }
         th, td {
             border: 1px solid yellow;
