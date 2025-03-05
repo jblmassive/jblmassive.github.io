@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipment Rental Price List</title>
-    <style>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <title = "Equipment Hire"/>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- scaling responsiveness for small devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- links to load CSS -->	 
+    <link href="css/ui.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Loads nav icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <style>
         body {
             background-color: black;
             color: white;
@@ -34,10 +45,30 @@
             text-align: center;
         }
     </style>
-</head>
-<body>
 
-<h2>Equipment Rental Price List</h2>
+  </head>
+
+   <body>
+        
+        <!-- everything goes inside this div -->
+        <div class="main" id="mainid">
+            
+            <img class ="jbllogo" src="imgs/jbl-WORDS-line.png" alt="JBL Logo"/>
+           
+         
+           <div class="nav" id="navid">         
+                <a href="home.html"> Home</a>
+                <a href="music.html"> Our Music</a>
+                <a href="artists.html"> Our Artists</a>
+                <a href="equipmenthire.html"> Equipment Hire</a>
+                <a href="aboutcontact.html"> Contact</a>  
+            </div>
+
+    <header>
+        
+        <h2>Equipment Hire List</h2>
+
+    </header>
 
 <table>
     <tr class="category"><th colspan="3">DJ Decks</th></tr>
@@ -77,6 +108,7 @@
     <tr><td>Delivery</td><td>Delivery & Pickup - minimum</td><td>£20.00</td></tr>
     <tr><td>Setup</td><td>Per hour</td><td>£30.00</td></tr>
 </table>
-
+  
 </body>
+    
 </html>
