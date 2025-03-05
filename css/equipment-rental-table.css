@@ -11,38 +11,50 @@
     font-weight: normal;
     font-style: normal;
 
-    body {
-        background-size: cover;
-        font-family: 'Philly Sans';
-        color: white;
-        text-align: center;
-    }
-
-    table {
-        background: url('your-image.jpg') no-repeat center center fixed;
-        background-size: cover;
-        font-family: 'Philly Sans';
-        color: white;
-        text-align: center;
-        
-        margin-top: 20px; /* Adjusted for better spacing */
-        margin: 20px auto;
-        width: 100%; /* Allow full width on small screens */
-        table-layout: fixed;
-        overflow-x: auto; /* Allow horizontal scrolling if necessary */
-        
-        border-collapse: collapse;
-        background-color: rgba(0, 0, 0, 0.7); /* Darker translucent background */
-        backdrop-filter: blur(5px); /* Smooth blur effect */
-    }
+ 
+/* Table Styling */
+table {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker translucent background */
+    backdrop-filter: blur(5px); /* Smooth blur effect */
+    margin: 20px auto;
+    width: 80%; /* Allow full width on small screens */
+    table-layout: fixed;
+    border-collapse: collapse;
+    color: white; /* Table text color */
 }
 
+/* Table Headers */
 th, td {
     border: 1px solid yellow; /* Solid yellow border */
-    padding: 8px;
+    padding: 12px;
     text-align: left;
     min-width: 100px; /* Minimum width for each cell */
 }
 
+/* Header Styling */
 th {
-    background-color: rgba(255, 255, 0, 0.6);
+    background-color: rgba(255, 255, 0, 0.6); /* Slightly translucent yellow */
+    color: black;
+}
+
+/* Category rows with Turquoise Background */
+.category {
+    background-color: rgba(0, 255, 255, 0.7); /* Turquoise with opacity */
+    color: black;
+    font-weight: bold;
+    padding: 12px;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    /* Smaller font and padding for mobile devices */
+    th, td {
+        font-size: 14px; /* Smaller font for small screens */
+        padding: 5px; /* Reduce padding on small screens */
+    }
+
+    table {
+        width: 100%; /* Allow table to use full width */
+        margin-top: 20px;
+    }
+}
