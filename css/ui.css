@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: 'PhillySans';
-    src: url('/fonts/PhillySans.otf') format('otf'),
+    src: url('/fonts/PhillySans.otf') format('opentype'),
     font-weight: normal;
     font-style: normal;
 }
