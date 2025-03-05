@@ -18,7 +18,7 @@
          /* .contact-form class */
         .contact-form {
             font-family: 'Philly Sans';
-            font-size: 15px; 
+            font-size: 20px; 
             background-color: rgba(255, 255, 255, 0.8);  /* 0.8 is 80% opacity */
             padding: 20px;
             border-radius: 8px;
@@ -50,6 +50,8 @@
             min-height: 100px;
         }
         .form-group input[type="submit"] {
+            font-family: 'Philly Sans';
+            font-size: 20px; 
             background-color: #4CAF50;
             color: white;
             border: none;
