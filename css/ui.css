@@ -10,10 +10,11 @@
 
 /* main div class enclosing all other divs */
 .main, html {  
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     margin: 0;
-    
     background-image: url("../imgs/decksPic.jpg");
     height: 100%;
     background-position: center center;
