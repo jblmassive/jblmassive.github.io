@@ -1,17 +1,25 @@
-@media (max-width: 768px) {
-    th, td {
-        font-size: 14px; /* Smaller font for small screens */
-        padding: 5px; /* Reduce padding on small screens */
-    }
-
-    @font-face {
+/* Global styles */
+@font-face {
     font-family: 'Philly Sans';
     src: url('/fonts/PhillySans-Regular.woff') format('woff'),
          url('/fonts/PhillySans-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
+}
 
- 
+/* General body styling */
+body {
+    background-image: url('your-image.jpg'); /* Ensure the path is correct */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: 'Philly Sans', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
 /* Table Styling */
 table {
     background-color: rgba(0, 0, 0, 0.7); /* Darker translucent background */
@@ -47,14 +55,4 @@ th {
 
 /* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
-    /* Smaller font and padding for mobile devices */
-    th, td {
-        font-size: 14px; /* Smaller font for small screens */
-        padding: 5px; /* Reduce padding on small screens */
-    }
-
-    table {
-        width: 100%; /* Allow table to use full width */
-        margin-top: 20px;
-    }
-}
+    /* Smaller font and padding for mobil
