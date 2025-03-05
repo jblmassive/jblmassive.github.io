@@ -1,7 +1,8 @@
-#redirects to index.html
+#redirects to home.html
 --- 
 plugins:
   - jekyll-redirect-from
+redirect_to: "https://www.junglebooklegion.com/home.html"
 ---
 
 theme: jekyll-theme-hacker
