@@ -29,7 +29,7 @@ table {
     table-layout: fixed;
     border-collapse: collapse;
     color: white; /* Table text color */
-    font-size: 30px;
+    font-size: 20px;
 }
 
 /* Table Headers */
