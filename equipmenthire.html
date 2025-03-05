@@ -1,97 +1,43 @@
-
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Equipment Hire</title>
-    
-    <!-- scaling responsiveness for small devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-    <!-- links to load CSS -->	 
-    <link href="css/ui.css" rel="stylesheet" type="text/css"/>
-   <!-- <link href="css/equipment-rental-table.css" rel="stylesheet" type="text/css"/> -->
-  </head>
-
-  <style>
-        @media (max-width: 768px) {
-            th, td {
-              font-size: 14px; /* Smaller font for small screens */
-              padding: 5px; /* Reduce padding on small screens */
-            }
-
-       body {
-            background: url('your-image.jpg') no-repeat center center fixed;
-            background-size: cover;
-            font-family: Arial, sans-serif;
+    <title>Equipment Rental Price List</title>
+    <style>
+        body {
+            background-color: black;
             color: white;
+            font-family: Arial, sans-serif;
             text-align: center;
         }
-       
         table {
-            background: url('your-image.jpg') no-repeat center center fixed;
-            background-size: cover;
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
-                
-            margin-top: 100px; /* Adjust value as needed */
-            margin: 20px auto;
             width: auto;
-            table-layout: fixed;
-            overflow-x: auto;
-          
+            margin: 20px auto;
             border-collapse: collapse;
-            background-color: rgba(0, 0, 0, 0.8); /* Translucent black */
-            backdrop-filter: blur(5px); /* Smooth blur effect */
-        }
-
-        
+            background-color: rgba(255, 255, 0, 0.2); /* Translucent yellow */
         }
         th, td {
             border: 1px solid yellow;
             padding: 8px;
             text-align: left;
-            min-width: auto;
+            min-width: 150px;
         }
-
         th {
-            background-color: rgba(255, 255, 0, 0.6); /* Slightly transparent yellow */
+            background-color: rgba(255, 255, 0, 0.5); /* Slightly darker yellow */
             color: black;
         }
-
         .category {
             font-weight: bold;
             background-color: rgba(255, 255, 0, 0.8);
             color: black;
             text-align: center;
         }
+    </style>
+</head>
+<body>
 
-
-    
-  </style>
-  
-   <body>
-        
-        <!-- everything goes inside this div -->
-        <div class="main" id="mainid">
-            
-            <img class ="jbllogo" src="imgs/jbl-WORDS-line.png" alt="JBL Logo"/>
-           
-         
-            <div class="nav" id="navid">         
-                <a href="home.html"> Home</a>
-                <a href="music.html"> Our Music</a>
-                <a href="artists.html"> Our Artists</a>
-                <a href="equipmenthire.html"> Equipment Hire</a>
-                <a href="aboutcontact.html"> Contact</a>  
-            </div>
-              
-<div class="table" id="tableid"
-              
-<h1>Equipment Rental Price List</h1>
+<h2>Equipment Rental Price List</h2>
 
 <table>
     <tr class="category"><th colspan="3">DJ Decks</th></tr>
@@ -124,17 +70,13 @@
     <tr><td>Par Can Pair</td><td>Basic par can light</td><td>£10.00</td></tr>
 
     <tr class="category"><th colspan="3">Cabling</th></tr>
-    <tr><td>Audio</td><td>XLR, TRS, Speak on, RCA etc.</td><td></td></tr>
-    <tr><td>Power</td><td>IEC, Extensions</td><td></td></tr>
+    <tr><td>Audio</td><td>XLR, TRS, Speak on, RCA etc.</td><td>-</td></tr>
+    <tr><td>Power</td><td>IEC, Extensions</td><td>-</td></tr>
 
     <tr class="category"><th colspan="3">Miscellaneous</th></tr>
     <tr><td>Delivery</td><td>Delivery & Pickup - minimum</td><td>£20.00</td></tr>
     <tr><td>Setup</td><td>Per hour</td><td>£30.00</td></tr>
-  
 </table>
 
-</div>
-
 </body>
-    
 </html>
