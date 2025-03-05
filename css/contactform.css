@@ -1,3 +1,10 @@
+         /* New container for centering the contact form */
+         .contact-form-container {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             min-height: 100vh; /* Ensure full viewport height for centering */
+         }
 
          /* .contact-form class */
         .contact-form {
