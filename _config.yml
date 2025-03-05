@@ -2,7 +2,6 @@
 --- 
 plugins:
   - jekyll-redirect-from
-redirect_to: "https://www.junglebooklegion.com/home.html"
 ---
 
 theme: jekyll-theme-hacker
