@@ -1,3 +1,3 @@
 ---
-redirect_to: "https://yourdomain.github.io/new-page.html"
+redirect_to: "https://www.junglebooklegion.com/home.html"
 ---
