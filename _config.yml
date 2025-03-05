@@ -1,4 +1,4 @@
-#redirects to home.html
+#redirects to index.md
 --- 
 plugins:
   - jekyll-redirect-from
