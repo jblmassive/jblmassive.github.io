@@ -1,6 +1,5 @@
 
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
 
 @font-face {
     font-family: 'PhillySans';
@@ -24,7 +23,7 @@
     /* Full height */
     height: 100%; 
 
-    /* Center and scale the image nicely */
+    /* Center and scale image */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
