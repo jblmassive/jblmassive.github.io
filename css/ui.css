@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
 
+@font-face {
+    font-family: 'PhillySans';
+    src: url('/fonts/PhillySans.otf') format('otf'),
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* main div class enclosing all other divs */
 .main, html {  
     position: relative;
@@ -38,7 +45,7 @@
 
 /* navigation class */
 .nav {
-    font-family: "Nosifer", sans-serif;
+    font-family: "PhillySans", sans-serif;
     font-weight: 400;
     font-style: normal;
     /* background-color: #333; */
