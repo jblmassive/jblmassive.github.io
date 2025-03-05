@@ -1,6 +1,7 @@
----
-permalink: /
-redirect_to: "https://www.junglebooklegion.com/home.html"
+#redirects to index.html
+--- 
+plugins:
+  - jekyll-redirect-from
 ---
 
 theme: jekyll-theme-hacker
