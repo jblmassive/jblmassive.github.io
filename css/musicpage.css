@@ -9,9 +9,10 @@ body {
     overflow: auto;
     font-size: clamp(24px, 4vw, 30px); /* Responsive font size */
 
-h2 {
+h1 {
     font-size: 36px; /* Adjust heading size */
-    ackground-color: #4CAF50;
+    font-color: #ffd800;
+    background-color: #4CAF50;
     margin-bottom: 20px;
     font-family: "Philly Sans";
     font-weight: 400;
