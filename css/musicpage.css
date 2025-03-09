@@ -6,7 +6,7 @@ body {
     font-weight: 400;
     font-style: normal;
     background-color: rgba(255,255,255,0.1);
-    overflow: hidden;
+    overflow: auto;
     font-size: clamp(24px, 4vw, 30px); /* Responsive font size */
 
 h2 {
