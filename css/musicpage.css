@@ -10,7 +10,8 @@ body {
     font-size: clamp(24px, 4vw, 30px); /* Responsive font size */
 
 h2 {
-    font-size: 32px; /* Adjust heading size */
+    font-size: 36px; /* Adjust heading size */
+    ackground-color: #4CAF50;
     margin-bottom: 20px;
     font-family: "Philly Sans";
     font-weight: 400;
