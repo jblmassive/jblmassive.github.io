@@ -10,9 +10,15 @@ body {
     font-size: clamp(24px, 4vw, 30px); /* Responsive font size */
 
 h2 {
-    font: Philly-Sans;
     font-size: 32px; /* Adjust heading size */
     margin-bottom: 20px;
+    font-family: "Philly Sans";
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgba(255,255,255,0.1);
+    overflow: hidden;
+    font-size: clamp(24px, 4vw, 30px); /* Responsive font size */
+}
     }
 
 .youtube-container {
