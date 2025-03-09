@@ -1,17 +1,22 @@
+body {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
 h2 {
     font: Philly-Sans;
     font-size: 32px; /* Adjust heading size */
     margin-bottom: 20px;
     }
 
-youtube-container {
+.youtube-container {
     width: 80%;
     max-width: 1050px;
     height: 500px;
     position: relative;
                   }
  
-youtube-container iframe {
+.youtube-container iframe {
      position: absolute;
      top: 0;
      left: 0;
