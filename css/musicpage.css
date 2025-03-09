@@ -2,6 +2,12 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-family: "Philly Sans";
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgba(255,255,255,0.1);
+    overflow: hidden;
+    font-size: clamp(24px, 4vw, 30px); /* Responsive font size */
 
 h2 {
     font: Philly-Sans;
@@ -14,6 +20,9 @@ h2 {
     max-width: 1050px;
     height: 500px;
     position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
                   }
  
 .youtube-container iframe {
