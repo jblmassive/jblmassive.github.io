@@ -11,7 +11,7 @@ body {
 
 h1 {
     font-size: 36px; /* Adjust heading size */
-    font-color: #ffd800;
+    color: #ffd800;
     background-color: #4CAF50;
     margin-bottom: 20px;
     font-family: "Philly Sans";
