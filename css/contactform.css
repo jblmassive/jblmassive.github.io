@@ -40,7 +40,7 @@
             color: #333;
         }
         .form-group input, .form-group textarea {
-            width: 100%;
+            width: 90%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
