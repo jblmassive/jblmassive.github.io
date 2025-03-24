@@ -21,13 +21,8 @@ h1 {
             font-weight: bold;
 
         }
-
-instagram-media {
-    
-    ustify-content: center;
-    align-items: center;
-    height: 100vh; /* Make sure it takes the full viewport height */
-    margin: 0;
-    text-align: center; /* Center text content */
-    flex-direction: column; /* Stack content vertically */
+.instagram-media {
+    display: flex !important;
+    justify-content: center !important;
+    margin: auto !important;
 }
