@@ -6,24 +6,18 @@
     font-style: normal;
 }
 
-body {
-    font-family: "Philly Sans", sans-serif;
+font-family: "Philly Sans";
     font-weight: 400;
     font-style: normal;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Make sure it takes the full viewport height */
-    margin: 0;
-    text-align: center; /* Center text content */
-    flex-direction: column; /* Stack content vertically */
-}
+
+body{
+    align-content:centre;
 
 h1 {
-    color: #f39c12;
-}
+            color: #f39c12;
+        }
+        a {
+            color: #f39c12;
+            font-weight: bold;
 
-a {
-    color: #f39c12;
-    font-weight: bold;
-}
+        }
