@@ -103,7 +103,7 @@ footer{border-top:1px solid var(--line);border-bottom:0}
 }
 .hero h1{
   font-size:clamp(2.75rem,9vw,9rem);
-  -webkit-text-stroke:clamp(1.5px,.035em,4px) var(--blue);
+  -webkit-text-stroke:clamp(1.5px,.035em,4px) #000;
   paint-order:stroke fill;
 }
 .page-intro h1{font-size:clamp(2.25rem,6vw,5.5rem)}
