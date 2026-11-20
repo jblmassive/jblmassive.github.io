@@ -1,120 +1,75 @@
-
-
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <title>Our Music</title>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- scaling responsiveness for small devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-    <!-- links to load CSS -->	 
-    <link href="css/ui.css" rel="stylesheet" type="text/css"/>
-    <link href="css/musicpage.css" rel="stylesheet" type="text/css"/>
-
-  </head>
-
-      <header>
-
-    </header>
-
-   <body>
-        
-        <!-- everything goes inside this div -->
-        <div class="main" id="mainid">           
-            <img class ="jbllogo" src="imgs/jbl-WORDS-line.png" alt="JBL Logo"/>                 
-            <div class="nav" id="navid">          
-                <a href="home.html"><i class="fa fa-home"></i> Home</a>
-                <a href="music.html"><i class="fas fa-headphones"></i> Our Music</a>
-                <a href="artists.html"><i class="fab fa-napster"></i> Our Artists</a>
-                <a href="equipmenthire.html"><i class="fas fa-tools"></i> Equipment Hire</a>
-                <a href="aboutcontact.html"><i class="fas fa-share-alt"></i> Contact</a>
-            </div>
-
-           <br>
-
-<!-- Bandcamp Embed -->
-<h1> Bandcamp </h1>          
-<div style="text-align: center; margin: 0 auto;">
-  
-    <iframe style="border: 0; width: 350px; height: 442px;" 
-        src="https://bandcamp.com/EmbeddedPlayer/track=605007062/size=large/bgcol=333333/linkcol=0687f5/tracklist=false/transparent=true/" seamless>
-        <a href="https://junglebooklegion.bandcamp.com/track/jacks-specific-state-mashup">Jack's Specific State (Mashup) by BROKE</a>
-    
-  <iframe style="border: 0; width: 350px; height: 442px;" 
-    src="https://bandcamp.com/EmbeddedPlayer/track=147741137/size=large/bgcol=333333/linkcol=0687f5/tracklist=false/transparent=true/" seamless>
-    <a href="https://junglebooklegion.bandcamp.com/track/here4u-edibles-edit">HERE4U (EDIBLES EDIT) by DAVENPORT</a>
-  </iframe>
-      
-   <iframe style="border: 0; width: 350px; height: 442px;" 
-      src="https://bandcamp.com/EmbeddedPlayer/track=2328074853/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless>
-      <a href="https://junglebooklegion.bandcamp.com/track/party-at-mikes-2">PARTY AT MIKES by DAVENPORT</a>
-    </iframe>
-
-    <iframe style="border: 0; width: 350px; height: 442px;" 
-      src="https://bandcamp.com/EmbeddedPlayer/track=2589694511/size=large/bgcol=333333/linkcol=4ec5ec/tracklist=false/transparent=true/" seamless>
-      <a href="https://junglebooklegion.bandcamp.com/track/voices">VOICES by BROKE</a>
-    </iframe>
-<br>
-      <iframe style="border: 0; width: 350px; height: 442px;" 
-        src="https://bandcamp.com/EmbeddedPlayer/track=147741137/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless>
-        <a href="https://junglebooklegion.bandcamp.com/track/here4u-edibles-edit">HERE4U (EDIBLES EDIT) by DAVENPORT</a>
-      </iframe>
-
-      <iframe style="border: 0; width: 350px; height: 442px;" 
-        src="https://bandcamp.com/EmbeddedPlayer/track=3355497459/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless>
-        <a href="https://junglebooklegion.bandcamp.com/track/let-me-take-u">LET ME TAKE U by DAVENPORT</a>
-      </iframe>
-
-      <iframe style="border: 0; width: 350px; height: 442px;" 
-        src="https://bandcamp.com/EmbeddedPlayer/track=3959522642/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless>
-        <a href="https://junglebooklegion.bandcamp.com/track/here4u-rave-edit">HERE4U (RAVE EDIT) by DAVENPORT</a>
-      </iframe>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Browse Jungle Book Legion releases and listen to tracks and mixes.">
+<title>Releases &amp; Mixes | Jungle Book Legion</title>
+<link rel="icon" type="image/png" href="/jbl-logo.png">
+<link rel="stylesheet" href="/style.css?v=8">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top" id="top">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Jungle Book Legion home"><img src="/jbl-logo.png" alt="" width="52" height="45"><span>Jungle Book<br>Legion</span></a>
+    <nav aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/music.html" aria-current="page">Music</a>
+      <a href="/events.html">Events</a>
+      <a href="/production.html">Production</a>
+    </nav>
   </div>
-<br>
-
-
-          
-<!-- SoundCloud Embed -->
-<h1> SoundCloud </h1>
-<iframe width="70%" height="180" scrolling="no" frameborder="no" allow="autoplay" 
-  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1821866607&color=%2300fff6&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-  </iframe>
-  <div style="font-size: 10px; 
-    color: #cccccc;
-    line-break: anywhere;word-break: normal;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis; 
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-    <a href="https://soundcloud.com/junglebooklegion" 
-      title="Jungle Book Legion" 
-      target="_blank" style="
-      color: #cccccc; 
-    <a href="https://soundcloud.com/junglebooklegion/misfit-3rd-may-2024-dornan-b2b-davenport-audio" title="MISFIT Ft. DORNAN b2b DAVENPORT - LIVE" target="_blank" style="color: #cccccc; text-decoration: none;"></a></div>
-          <br>
-<h1> YouTube </h1>
-
-    <div class="youtube-container">
-        <iframe 
-            src="https://www.youtube-nocookie.com/embed/videoseries?list=PLoE0Y4CQH8iczbimMgIoUASlUIiLUEYpc&si=YLx23sc6gNeZJT6o&autoplay=1&rel=0" 
-            frameborder="0" 
-            allowfullscreen>
-        </iframe>
+</header>
+<main id="main">
+  <header class="page-intro sleeve-intro wrap">
+    <div>
+      <h1>Releases<br>&amp; Mixes</h1>
+      <p>Jungle Book Legion releases on Bandcamp and mixes on SoundCloud.</p>
     </div>
+    <a class="sleeve-art" href="https://junglebooklegion.bandcamp.com/track/here4u-edibles-edit">
+      <img src="https://f4.bcbits.com/img/a0896729714_2.jpg" width="350" height="350" alt="HERE4U (Edibles Edit) on Bandcamp">
+    </a>
+  </header>
+  <section class="wrap content-section" aria-labelledby="releases">
+    <div class="section-heading">
+      <h2 id="releases">Releases</h2>
+      <a class="button outline" href="https://junglebooklegion.bandcamp.com/music">Browse Bandcamp</a>
+    </div>
+    <div class="release-grid">
+      <a class="release-card" href="https://junglebooklegion.bandcamp.com/track/here4u-edibles-edit">
+        <img src="https://f4.bcbits.com/img/a0896729714_2.jpg" alt="" width="350" height="350" loading="lazy">
+        <h3>HERE4U (Edibles Edit)</h3>
+      </a>
+      <a class="release-card" href="https://junglebooklegion.bandcamp.com/track/voices">
+        <img src="https://f4.bcbits.com/img/a0718075936_2.jpg" alt="" width="350" height="350" loading="lazy">
+        <h3>Voices</h3>
+      </a>
+      <a class="release-card" href="https://junglebooklegion.bandcamp.com/track/let-me-take-u">
+        <img src="https://f4.bcbits.com/img/a0865914199_2.jpg" alt="" width="350" height="350" loading="lazy">
+        <h3>Let Me Take U</h3>
+      </a>
+    </div>
+  </section>
+      <article class="wrap social-card music-player">
+        <div class="social-header">
+          <h2>Mixes &amp; tracks</h2>
+          <a class="button small outline" href="https://soundcloud.com/junglebooklegion">Open SoundCloud</a>
+        </div>
+        <iframe class="soundcloud-player" title="Jungle Book Legion SoundCloud player" loading="lazy"
+          allow="encrypted-media"
+          src="https://w.soundcloud.com/player/?visual=true&amp;url=https%3A%2F%2Fapi.soundcloud.com%2Fusers%2F592628514&amp;show_artwork=true&amp;auto_play=false"></iframe>
+      </article>
 
-  <!-- youtube playlist embed 
-  <iframe 
-        width="560" 
-        height="315" 
-        src="https://invidious.snopyta.org/embed?playlist=PLoE0Y4CQH8iczbimMgIoUASlUIiLUEYpc&si=YLx23sc6gNeZJT6o" 
-        frameborder="0" 
-        allowfullscreen>
-</iframe> -->
-          <br><br>
+</main>
+<footer>
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Jungle Book Legion home"><img src="/jbl-logo.png" alt="" width="52" height="45"><span>Jungle Book<br>Legion</span></a>
+    <nav aria-label="Social media">
+      <a href="https://www.instagram.com/junglebooklegion/">Instagram</a>
+      <a href="https://www.facebook.com/JungleBookLegion/">Facebook</a>
+    </nav>
+  </div>
+</footer>
 </body>
-    
 </html>
