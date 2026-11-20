@@ -16,7 +16,7 @@ h3{font-size:1.125rem}
 .top,footer{background:#000}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:1.25rem;min-height:5rem}
 .brand{font-family:var(--heading);font-size:1.02rem;font-weight:950;line-height:.88;letter-spacing:-.06em;flex-shrink:0}
-.hero h1 span,.eyebrow{color:var(--yellow)}
+.eyebrow{color:var(--yellow)}
 nav,.actions{display:flex;align-items:center;gap:1.65rem}
 nav>a:not(.button),footer a:not(.brand){font-size:.9375rem}
 nav>a:not(.button):hover,footer a:hover{color:var(--yellow)}
@@ -27,7 +27,6 @@ nav>a:not(.button):hover,footer a:hover{color:var(--yellow)}
 .button.outline:hover{border-color:var(--yellow);color:var(--yellow)}
 .hero{min-height:clamp(33rem,70vh,47rem);display:grid;align-items:center;border-block:1px solid var(--line);background:linear-gradient(90deg,#000000ef 0%,#00000088 65%,#00000024 100%),url("hero.jpg") center 58%/cover var(--bg)}
 .hero-content{padding-block:4rem}
-.hero h1{font-size:clamp(3.25rem,10vw,10rem)}
 .hero p{margin-top:1.55rem;color:#edf5fa;font-size:clamp(1.1rem,2vw,1.4rem)}
 .actions{margin-top:1.8rem;gap:.7rem;flex-wrap:wrap}
 .divisions{display:grid;grid-template-columns:1fr 1fr;margin-block:3.75rem;border:1px solid var(--line);background:var(--bg)}
@@ -93,9 +92,18 @@ textarea{resize:vertical}
 /* Shared navigation and page layouts */
 .top{border-bottom:1px solid var(--line)}
 footer{border-top:1px solid var(--line);border-bottom:0}
-.hero h1{font-family:Impact,"Arial Narrow",var(--heading);letter-spacing:-.025em}
-.hero h1{color:var(--yellow)}
-.hero h1 span{text-shadow:2px 2px 0 #000,4px 4px 0 var(--blue)}
+/* Page titles share one treatment, with a larger scale on the homepage. */
+.hero h1,.page-intro h1{
+  font-family:var(--heading);
+  font-weight:900;
+  line-height:1;
+  letter-spacing:-.045em;
+  text-wrap:balance;
+  color:var(--yellow);
+}
+.hero h1{font-size:clamp(2.75rem,9vw,9rem)}
+.page-intro h1{font-size:clamp(2.25rem,6vw,5.5rem)}
+.title-accent{text-shadow:2px 2px #000,4px 4px var(--blue)}
 .content-section{margin-block:1.5rem 3rem}
 .content-section h2,.music-player h2{font-size:clamp(1.85rem,4vw,3rem)}
 .section-heading{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem}
@@ -120,33 +128,15 @@ footer{border-top:1px solid var(--line);border-bottom:0}
 }
 
 /* Inner page introductions */
-@font-face{
-  font-family:"Philly Sans";
-  src:url("fonts/PhillySans-Regular.woff2") format("woff2");
-  font-style:normal;
-  font-weight:400;
-  font-display:swap;
-}
 .page-intro{
   padding:clamp(2.5rem,5vw,4.5rem) clamp(1rem,3vw,2.5rem) 1.75rem;
   border-bottom:1px solid var(--blue);
-}
-.page-intro h1{
-  font-family:"Philly Sans",Impact,var(--heading);
-  font-size:clamp(2.5rem,7vw,6rem);
-  font-weight:400;
-  line-height:1.02;
-  letter-spacing:0;
-  text-wrap:balance;
-  color:var(--yellow);
 }
 .page-intro p{margin-top:.75rem;max-width:48ch}
 .sleeve-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(8rem,24%);align-items:center;gap:1.25rem}
 .sleeve-art{display:block;border:1px solid var(--blue);box-shadow:5px 5px var(--blue)}
 .sleeve-art img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover}
-.club-intro h1 span{color:var(--yellow);text-shadow:2px 2px #000,5px 5px var(--blue)}
 .production-intro{padding-block-start:clamp(2rem,4vw,3rem)}
-.production-intro h1 span{color:var(--blue)}
 .production-intro .actions{margin-top:1rem}
 .production-intro .production-services{color:var(--blue);font-weight:700}
 @media(max-width:600px){
