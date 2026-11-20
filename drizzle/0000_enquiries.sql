@@ -1,0 +1,5 @@
+CREATE TABLE enquiries (
+  reference TEXT PRIMARY KEY,
+  received_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  payload TEXT NOT NULL
+);
