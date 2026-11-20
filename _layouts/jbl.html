@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ page.description | escape }}">
+<title>{{ page.title | escape }}</title>
+<link rel="icon" type="image/png" href="/jbl-logo.png">
+<link rel="stylesheet" href="/style.css?v={{ site.github.build_revision | default: "local" }}">
+{% if page.canonical %}<link rel="canonical" href="{{ page.canonical }}">{% endif %}
+{% if page.section == "production" %}<script type="module" src="/quote.js?v={{ site.github.build_revision | default: "local" }}"></script>{% endif %}
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+{% include site-header.html %}
+{{ content }}
+{% include site-footer.html %}
+</body>
+</html>

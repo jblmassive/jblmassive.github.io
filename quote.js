@@ -1,4 +1,8 @@
-import { equipmentSelection, equipmentReview } from './basket.js?v=4';
+// Keep the imported module on the same deployment revision as this script.
+const basketUrl = new URL('./basket.js', import.meta.url);
+basketUrl.search = new URL(import.meta.url).search;
+const { equipmentSelection, equipmentReview } = await import(basketUrl);
+const retryMessage = 'Your enquiry could not be sent. Please try again.';
 
 const form = document.querySelector('#quote-form');
 const status = document.querySelector('#quote-status');
@@ -162,10 +166,17 @@ form.addEventListener('submit', async (event) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ reference, details, items })
     });
-    const result = await response.json();
+    const result = await response.json().catch(() => null);
     if (!response.ok) {
       if (response.status === 409) lastPayload = null;
-      throw new Error(result.error);
+      status.textContent = response.status < 500 && typeof result?.error === 'string' && result.error.trim()
+        ? result.error
+        : retryMessage;
+      return;
+    }
+    if (typeof result?.reference !== 'string' || !result.reference.trim()) {
+      status.textContent = retryMessage;
+      return;
     }
     form.reset();
     updateDraft(null);
@@ -176,8 +187,8 @@ form.addEventListener('submit', async (event) => {
     confirmation.querySelector('h2').focus();
     status.textContent = '';
     lastPayload = null;
-  } catch (error) {
-    status.textContent = error.message || 'Your enquiry could not be sent. Try again.';
+  } catch {
+    status.textContent = retryMessage;
   } finally {
     sendButton.disabled = false;
     editButton.disabled = false;

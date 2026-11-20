@@ -1,0 +1,11 @@
+<header class="top" id="top">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Jungle Book Legion home"><img src="/jbl-logo.png" alt="" width="52" height="45"><span>Jungle Book<br>Legion</span></a>
+    <nav aria-label="Main navigation">
+      <a href="/"{% if page.section == "home" %} aria-current="page"{% endif %}>Home</a>
+      <a href="/music.html"{% if page.section == "music" %} aria-current="page"{% endif %}>Music</a>
+      <a href="/events.html"{% if page.section == "events" %} aria-current="page"{% endif %}>Events</a>
+      <a href="/production.html"{% if page.section == "production" %} aria-current="page"{% endif %}>Production</a>
+    </nav>
+  </div>
+</header>

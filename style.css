@@ -93,12 +93,9 @@ textarea{resize:vertical}
 /* Shared navigation and page layouts */
 .top{border-bottom:1px solid var(--line)}
 footer{border-top:1px solid var(--line);border-bottom:0}
-.hero h1,.page-intro h1{font-family:Impact,"Arial Narrow",var(--heading);letter-spacing:-.025em}
+.hero h1{font-family:Impact,"Arial Narrow",var(--heading);letter-spacing:-.025em}
 .hero h1{color:var(--yellow)}
 .hero h1 span{text-shadow:2px 2px 0 #000,4px 4px 0 var(--blue)}
-.page-intro{padding-block:clamp(3rem,8vw,7rem) 2rem}
-.page-intro h1{font-size:clamp(2.35rem,10vw,9rem);color:var(--yellow)}
-.page-intro p{margin-top:1rem;max-width:48ch}
 .content-section{margin-block:1.5rem 3rem}
 .content-section h2,.music-player h2{font-size:clamp(1.85rem,4vw,3rem)}
 .section-heading{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem}
@@ -122,16 +119,39 @@ footer{border-top:1px solid var(--line);border-bottom:0}
   footer .bar{flex-wrap:wrap;padding-block:.85rem}
 }
 
-.page-intro{padding-inline:clamp(1rem,3vw,2.5rem);border-bottom:1px solid var(--blue)}
+/* Inner page introductions */
+@font-face{
+  font-family:"Philly Sans";
+  src:url("fonts/PhillySans-Regular.woff2") format("woff2");
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+}
+.page-intro{
+  padding:clamp(2.5rem,5vw,4.5rem) clamp(1rem,3vw,2.5rem) 1.75rem;
+  border-bottom:1px solid var(--blue);
+}
+.page-intro h1{
+  font-family:"Philly Sans",Impact,var(--heading);
+  font-size:clamp(2.5rem,7vw,6rem);
+  font-weight:400;
+  line-height:1.02;
+  letter-spacing:0;
+  text-wrap:balance;
+  color:var(--yellow);
+}
+.page-intro p{margin-top:.75rem;max-width:48ch}
 .sleeve-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(8rem,24%);align-items:center;gap:1.25rem}
 .sleeve-art{display:block;border:1px solid var(--blue);box-shadow:5px 5px var(--blue)}
 .sleeve-art img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover}
 .club-intro h1 span{color:var(--yellow);text-shadow:2px 2px #000,5px 5px var(--blue)}
+.production-intro{padding-block-start:clamp(2rem,4vw,3rem)}
+.production-intro h1 span{color:var(--blue)}
+.production-intro .actions{margin-top:1rem}
 .production-intro .production-services{color:var(--blue);font-weight:700}
 @media(max-width:600px){
   .sleeve-intro{grid-template-columns:1fr}
   .sleeve-art{width:min(48%,11rem)}
-  .production-intro h1{font-size:clamp(1.85rem,8.25vw,3.25rem)}
 }
 
 /* Main navigation */

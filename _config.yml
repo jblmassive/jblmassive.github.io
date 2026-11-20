@@ -1,10 +1,6 @@
-#redirects to index.md
---- 
 plugins:
   - jekyll-redirect-from
----
 
 theme: jekyll-theme-hacker
-layout: default
 title: Jungle Book Legion
 description: base domain, check out our github
