@@ -27,7 +27,6 @@ nav>a:not(.button):hover,footer a:hover{color:var(--yellow)}
 .button.outline:hover{border-color:var(--yellow);color:var(--yellow)}
 .hero{min-height:clamp(33rem,70vh,47rem);display:grid;align-items:center;border-block:1px solid var(--line);background:linear-gradient(90deg,#000000ef 0%,#00000088 65%,#00000024 100%),url("hero.jpg") center 58%/cover var(--bg)}
 .hero-content{padding-block:4rem}
-.hero p{margin-top:1.55rem;color:#edf5fa;font-size:clamp(1.1rem,2vw,1.4rem)}
 .actions{margin-top:1.8rem;gap:.7rem;flex-wrap:wrap}
 .divisions{display:grid;grid-template-columns:1fr 1fr;margin-block:3.75rem;border:1px solid var(--line);background:var(--bg)}
 .division{padding:clamp(1.5rem,4vw,3.5rem)}
@@ -91,7 +90,19 @@ textarea{resize:vertical}
 
 /* Shared navigation and page layouts */
 .top{border-bottom:1px solid var(--line)}
-footer{border-top:1px solid var(--line);border-bottom:0}
+footer{border-top:1px solid var(--line)}
+.site-footer{
+  display:grid;
+  grid-template-columns:1.25fr 1fr 1fr;
+  align-items:start;
+  gap:1.75rem;
+  padding-block:2rem;
+}
+.site-footer nav{display:grid;justify-items:start;gap:.65rem}
+.site-footer .footer-label{font-size:.875rem;font-weight:700;color:var(--muted)}
+@media(max-width:650px){
+  .site-footer{grid-template-columns:1fr;gap:1.25rem}
+}
 /* Page titles share one treatment, with a larger scale on the homepage. */
 .hero h1,.page-intro h1{
   font-family:var(--heading);
@@ -100,22 +111,43 @@ footer{border-top:1px solid var(--line);border-bottom:0}
   letter-spacing:-.045em;
   text-wrap:balance;
   color:var(--yellow);
-}
-.hero h1{
-  font-size:clamp(2.75rem,9vw,9rem);
   -webkit-text-stroke:clamp(1.5px,.035em,4px) #000;
   paint-order:stroke fill;
 }
+.hero h1{font-size:clamp(2.75rem,9vw,9rem)}
 .page-intro h1{font-size:clamp(2.25rem,6vw,5.5rem)}
-.title-accent{text-shadow:2px 2px #000,4px 4px var(--blue)}
+.hero-divisions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem 1.5rem;
+  list-style:none;
+  padding:0;
+  margin:1.55rem 0 0;
+  color:var(--text);
+  font-size:clamp(1rem,2vw,1.3rem);
+  font-weight:700;
+}
+.hero-divisions li{border-left:2px solid var(--blue);padding-left:.6rem}
 .content-section{margin-block:1.5rem 3rem}
-.content-section h2,.music-player h2{font-size:clamp(1.85rem,4vw,3rem)}
+.content-section h2,.music-player h2,.route-card h2{
+  color:var(--text);
+  font-size:clamp(1.85rem,4vw,3rem);
+  line-height:1.06;
+  letter-spacing:-.04em;
+}
+:is(.content-section,.music-player,.route-card) h2::after{
+  content:"";
+  display:block;
+  width:2rem;
+  height:2px;
+  margin-top:.55rem;
+  background:var(--blue);
+}
 .section-heading{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem}
 .route-grid,.release-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
 .route-grid{margin-block:2rem 3rem}
 .route-card,.release-card,.event-flyer{display:block;border:1px solid var(--blue)}
 .route-card{height:100%;padding:1.25rem}
-.route-card h2{font-size:clamp(1.65rem,3.4vw,3.5rem);color:var(--yellow)}
 .route-card p,.event-flyer p,.hire-grid p{margin-top:.55rem}
 .route-card:hover,.release-card:hover,a.event-flyer:hover{border-color:var(--yellow)}
 .release-grid,.past-grid,.hire-grid{margin-top:1.25rem}
@@ -128,7 +160,6 @@ footer{border-top:1px solid var(--line);border-bottom:0}
 @media(max-width:650px){
   .route-grid,.past-grid,.hire-grid{grid-template-columns:1fr}
   .release-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  footer .bar{flex-wrap:wrap;padding-block:.85rem}
 }
 
 /* Inner page introductions */
@@ -237,7 +268,6 @@ footer{border-top:1px solid var(--line);border-bottom:0}
 .enquiry-steps a span{flex:none;display:grid;place-items:center;width:1.6rem;height:1.6rem;border:1px solid currentColor}
 .enquiry-steps a[aria-current="step"]{color:var(--yellow);border-color:var(--yellow)}
 .enquiry-steps a[aria-current="step"] span{background:var(--yellow);color:#000;border-color:var(--yellow)}
-#enquiry-flow h2{font-size:clamp(1.85rem,4vw,3rem)}
 .step-description{margin-top:.7rem}
 @media(max-width:480px){
   .enquiry-steps a{display:grid;align-content:start;font-size:.8rem;gap:.3rem}
