@@ -71,8 +71,11 @@ textarea{resize:vertical}
 
 .brand{display:inline-flex;align-items:center;gap:.65rem;text-transform:uppercase}
 .brand img{display:block;width:3.25rem;height:auto}
-@media(max-width:540px){
-  .top .brand span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+/* Use the compact JBL mark when navigation has less room. */
+.header-brand{display:block;flex:none;width:3.25rem}
+.header-brand img{display:block;width:100%;height:auto}
+@media(min-width:651px){
+  .header-brand{width:clamp(10rem,21vw,14rem)}
 }
 
 .event-link{margin-top:.8rem}
@@ -98,8 +101,7 @@ footer{border-top:1px solid var(--line)}
   gap:1.75rem;
   padding-block:2rem;
 }
-.footer-brand{width:min(100%,15rem)}
-.footer-brand img{display:block;width:100%;height:auto}
+.site-footer .brand{justify-self:start}
 .site-footer nav{display:grid;justify-items:start;gap:.65rem}
 .site-footer .footer-label{font-size:.875rem;font-weight:700;color:var(--muted)}
 @media(max-width:650px){
