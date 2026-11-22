@@ -183,7 +183,12 @@ form.addEventListener('submit', async (event) => {
     activate(3);
     form.hidden = true;
     confirmation.hidden = false;
-    confirmation.querySelector('p').textContent = 'Your reference is ' + result.reference + '. JBL will confirm availability and pricing.';
+    // Keep this display format in sync with the enquiry email contract in README.md.
+    const uuidPrefix = /^([a-f0-9]{8})-([a-f0-9]{4})-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.exec(result.reference);
+    const displayReference = uuidPrefix
+      ? 'JBL-' + (uuidPrefix[1] + uuidPrefix[2]).toUpperCase()
+      : result.reference;
+    confirmation.querySelector('#enquiry-reference').textContent = displayReference;
     confirmation.querySelector('h2').focus();
     status.textContent = '';
     lastPayload = null;
