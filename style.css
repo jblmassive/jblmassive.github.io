@@ -120,7 +120,7 @@ footer{border-top:1px solid var(--line)}
 }
 .hero-logo{display:block;width:min(100%,clamp(16rem,36vw,28rem));height:auto}
 .page-intro h1{font-size:clamp(2.25rem,6vw,5.5rem)}
-.hero-divisions{
+.page-subtitle{
   display:flex;
   flex-wrap:wrap;
   gap:.5rem 1.5rem;
@@ -131,7 +131,7 @@ footer{border-top:1px solid var(--line)}
   font-size:clamp(1rem,2vw,1.3rem);
   font-weight:700;
 }
-.hero-divisions li{border-left:2px solid var(--blue);padding-left:.6rem}
+.page-subtitle li{border-left:2px solid var(--blue);padding-left:.6rem}
 .content-section{margin-block:1.5rem 3rem}
 .content-section h2,.music-player h2,.route-card h2{
   color:var(--text);
@@ -171,13 +171,11 @@ footer{border-top:1px solid var(--line)}
   padding:clamp(2.5rem,5vw,4.5rem) clamp(1rem,3vw,2.5rem) 1.75rem;
   border-bottom:1px solid var(--blue);
 }
-.page-intro p{margin-top:.75rem;max-width:48ch}
 .sleeve-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(8rem,24%);align-items:center;gap:1.25rem}
 .sleeve-art{display:block;border:1px solid var(--blue);box-shadow:5px 5px var(--blue)}
 .sleeve-art img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover}
 .production-intro{padding-block-start:clamp(2rem,4vw,3rem)}
 .production-intro .actions{margin-top:1rem}
-.production-intro .production-services{color:var(--blue);font-weight:700}
 @media(max-width:600px){
   .sleeve-intro{grid-template-columns:1fr}
   .sleeve-art{width:min(48%,11rem)}
