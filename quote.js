@@ -64,7 +64,7 @@ function showStepFromHash(focus = true) {
     return;
   }
   activate(details ? 2 : 1);
-  if (details) showDetails();
+  showDetails();
   if (!focus) return;
   const target = location.hash === '#equipment-basket'
     ? document.querySelector('#equipment-basket')
@@ -137,7 +137,7 @@ editButton.addEventListener('click', () => {
   else showStepFromHash();
 });
 document.addEventListener('basketchange', () => {
-  if (!review.hidden && !sendButton.disabled) showReview(false);
+  if (location.hash === '#review' && !review.hidden && !sendButton.disabled) showReview(false);
 });
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
