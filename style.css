@@ -98,13 +98,15 @@ footer{border-top:1px solid var(--line)}
   gap:1.75rem;
   padding-block:2rem;
 }
+.footer-brand{width:min(100%,15rem)}
+.footer-brand img{display:block;width:100%;height:auto}
 .site-footer nav{display:grid;justify-items:start;gap:.65rem}
 .site-footer .footer-label{font-size:.875rem;font-weight:700;color:var(--muted)}
 @media(max-width:650px){
   .site-footer{grid-template-columns:1fr;gap:1.25rem}
 }
 /* Page titles share one treatment, with a larger scale on the homepage. */
-.hero h1,.page-intro h1{
+.page-intro h1{
   font-family:var(--heading);
   font-weight:900;
   line-height:1;
@@ -114,7 +116,7 @@ footer{border-top:1px solid var(--line)}
   -webkit-text-stroke:clamp(1.5px,.035em,4px) #000;
   paint-order:stroke fill;
 }
-.hero h1{font-size:clamp(2.75rem,9vw,9rem)}
+.hero-logo{display:block;width:min(100%,clamp(16rem,36vw,28rem));height:auto}
 .page-intro h1{font-size:clamp(2.25rem,6vw,5.5rem)}
 .hero-divisions{
   display:flex;
