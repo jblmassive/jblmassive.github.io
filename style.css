@@ -281,3 +281,26 @@ footer{border-top:1px solid var(--line)}
 
 /* Keep the step controls in view when a shorter panel replaces a taller one. */
 #enquiry-flow{min-block-size:100svh}
+
+/* Stage Command showcase */
+.stage-feature{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:1.5rem;
+  border-block:1px solid var(--line);
+  padding-block:clamp(1.5rem,4vw,3rem);
+}
+.stage-feature p,.stage-next p,.stage-example h3+p{margin-top:.75rem;max-width:62ch}
+.stage-next .button{margin-top:1rem}
+.stage-related{margin-top:1rem}
+.stage-related a{color:var(--blue);text-decoration:underline;text-underline-offset:.2em}
+.stage-example{margin:0;padding:1.25rem;border:1px solid var(--line);background:#101619}
+.stage-example figcaption{font-weight:700;color:var(--yellow)}
+.stage-example dl{margin:.75rem 0 0}
+.stage-example dl div{display:flex;gap:1rem;padding:.55rem 0;border-top:1px solid var(--line)}
+.stage-example dt{font-variant-numeric:tabular-nums;color:var(--blue)}
+.stage-example dd{margin:0}
+@media(max-width:650px){
+  .stage-feature{grid-template-columns:1fr;justify-items:start}
+}
