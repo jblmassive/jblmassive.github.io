@@ -207,9 +207,9 @@ footer{border-top:1px solid var(--line)}
 .top nav > a:hover{color:var(--blue)}
 .top nav > a[aria-current="page"]{color:var(--yellow)}
 .top nav > a:hover::after,.top nav > a[aria-current="page"]::after{opacity:1}
-@media(max-width:420px){
+@media(max-width:760px){
   .top .bar{flex-wrap:wrap;gap:.25rem;padding-block:.65rem}
-  .top nav{width:100%;justify-content:space-between}
+  .top nav{width:100%;flex-wrap:wrap;justify-content:space-between}
   .top nav > a{flex:1;text-align:center;padding-inline:.35rem}
   .top nav > a::after{inset-inline:.35rem}
 }
@@ -283,6 +283,7 @@ footer{border-top:1px solid var(--line)}
 #enquiry-flow{min-block-size:100svh}
 
 /* Stage Command showcase */
+.stage-command-logo{display:block;width:min(100%,32rem);height:auto}
 .stage-feature{
   display:grid;
   grid-template-columns:minmax(0,1fr) auto;
