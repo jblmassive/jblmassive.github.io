@@ -213,22 +213,18 @@ section: production
         <fieldset class="wide enquiry-group">
           <legend>Event information</legend>
           <label><span>Event date <span class="required-mark" aria-hidden="true">*</span></span><input name="Event date" type="date" required></label>
-          <label><span>Event type <span class="required-mark" aria-hidden="true">*</span></span><select name="Event type" required><option value="">Select an option</option><option>Club Night</option><option>Private Party</option><option>Festival</option><option>Wedding</option><option>Corporate Event</option><option>Live Music</option><option>Other</option></select></label>
-          <label><span>Venue name <span class="required-mark" aria-hidden="true">*</span></span><input name="Venue name" required></label>
-          <label><span>Town or city <span class="required-mark" aria-hidden="true">*</span></span><input name="Town or city" required></label>
-          <label><span>Estimated attendance <span class="required-mark" aria-hidden="true">*</span></span><select name="Estimated attendance" required><option value="">Select an option</option><option>Under 50</option><option>50–100</option><option>100–200</option><option>200–500</option><option>500–1,000</option><option>1,000+</option></select></label>
+          <label class="date-unconfirmed"><span><input id="date-unconfirmed" type="checkbox"> Date not confirmed</span></label>
+          <label><span>Venue or town <span class="required-mark" aria-hidden="true">*</span></span><input name="Venue or town" required></label>
+          <label><span>Estimated attendance <span class="required-mark" aria-hidden="true">*</span></span><select name="Estimated attendance" required><option value="">Select an option</option><option>Under 50</option><option>50–100</option><option>100–200</option><option>200–500</option><option>500–1,000</option><option>1,000+</option><option>Not sure yet</option></select></label>
         </fieldset>
         <fieldset class="wide enquiry-group">
           <legend>Contact details</legend>
           <label><span>Name <span class="required-mark" aria-hidden="true">*</span></span><input name="Name" autocomplete="name" required></label>
           <label><span>Email <span class="required-mark" aria-hidden="true">*</span></span><input name="Email" type="email" autocomplete="email" required></label>
-          <label><span>Phone number <span class="required-mark" aria-hidden="true">*</span></span><input name="Phone number" type="tel" autocomplete="tel" required></label>
+          <label>Phone number (optional)<input name="Phone number" type="tel" autocomplete="tel"></label>
         </fieldset>
         <fieldset class="wide enquiry-group">
           <legend>Production details</legend>
-          <label>Venue access for setup (optional)<input name="Venue access for setup" placeholder="e.g. From 4 pm"></label>
-          <label><span>Event start time <span class="required-mark" aria-hidden="true">*</span></span><input name="Event start time" type="time" required></label>
-          <label><span>Event end time <span class="required-mark" aria-hidden="true">*</span></span><input name="Event end time" type="time" required></label>
           <label class="wide">Services needed (optional)
             <select name="Services">
               <option value="">Select an option</option>
@@ -239,9 +235,7 @@ section: production
               <option>Help choosing a setup</option>
             </select>
           </label>
-          <label class="wide">Anything else we should know? (optional)<textarea name="Event requirements" rows="4" maxlength="5000"></textarea></label>
-          <label class="wide">Technical rider or stage plot link (optional)<input name="Technical documents" type="url" placeholder="https://"></label>
-          <label class="wide">Approximate budget (optional)<input name="Approximate budget"></label>
+          <label class="wide">Anything else we should know? (optional)<textarea name="Event requirements" rows="4" maxlength="5000" placeholder="Timings, setup access or anything we should factor into your quote"></textarea></label>
         </fieldset>
         <div class="wide form-actions" id="quote-next">
           <a class="button outline" href="#prices">Back to equipment</a>

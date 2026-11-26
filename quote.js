@@ -20,6 +20,20 @@ const steps = [...progress.querySelectorAll('a')];
 const confirmation = document.querySelector('#enquiry-confirmation');
 const incomplete = document.querySelector('#review-incomplete');
 const draftKey = 'jbl-event-enquiry-draft';
+const eventDate = form.elements.namedItem('Event date');
+const dateUnconfirmed = document.querySelector('#date-unconfirmed');
+const unconfirmedDate = 'Date not confirmed';
+
+function syncDateField() {
+  eventDate.disabled = dateUnconfirmed.checked;
+}
+
+function enquiryDetails() {
+  const details = Object.fromEntries(new FormData(form));
+  if (dateUnconfirmed.checked) details['Event date'] = unconfirmedDate;
+  return details;
+}
+
 
 function updateDraft(details) {
   try {
@@ -32,6 +46,10 @@ function updateDraft(details) {
 
 try {
   const saved = JSON.parse(sessionStorage.getItem(draftKey));
+  if (saved) {
+    saved['Venue or town'] ||= [saved['Venue name'], saved['Town or city']].filter(Boolean).join(', ');
+    dateUnconfirmed.checked = saved['Event date'] === unconfirmedDate;
+  }
   for (const field of form.elements) {
     if (field.name && typeof saved?.[field.name] === 'string') field.value = saved[field.name];
   }
@@ -39,7 +57,11 @@ try {
   // An unavailable or invalid draft does not prevent using the form.
 }
 
-form.addEventListener('input', () => updateDraft(Object.fromEntries(new FormData(form))));
+syncDateField();
+form.addEventListener('input', () => {
+  syncDateField();
+  updateDraft(enquiryDetails());
+});
 
 function activate(step) {
   prices.hidden = step !== 1;
@@ -84,7 +106,7 @@ function showDetails() {
 function showReview(focus = true) {
   const eventDetails = document.querySelector('#review-event');
   eventDetails.replaceChildren();
-  for (const [field, answer] of new FormData(form)) {
+  for (const [field, answer] of Object.entries(enquiryDetails())) {
     if (!answer.trim()) continue;
     const label = document.createElement('dt');
     const value = document.createElement('dd');
@@ -152,7 +174,7 @@ form.addEventListener('submit', async (event) => {
     form.reportValidity();
     return;
   }
-  const details = Object.fromEntries(new FormData(form));
+  const details = enquiryDetails();
   const items = equipmentSelection();
   const payload = JSON.stringify({ details, items });
   if (payload !== lastPayload) reference = crypto.randomUUID();
@@ -179,6 +201,7 @@ form.addEventListener('submit', async (event) => {
       return;
     }
     form.reset();
+    syncDateField();
     updateDraft(null);
     activate(3);
     form.hidden = true;
@@ -188,7 +211,7 @@ form.addEventListener('submit', async (event) => {
     const displayReference = uuidPrefix
       ? 'JBL-' + (uuidPrefix[1] + uuidPrefix[2]).toUpperCase()
       : result.reference;
-    confirmation.querySelector('#enquiry-reference').textContent = displayReference;
+    confirmation.querySelector('#enquiry-reference').textContent = result.displayReference || displayReference;
     confirmation.querySelector('h2').focus();
     status.textContent = '';
     lastPayload = null;
