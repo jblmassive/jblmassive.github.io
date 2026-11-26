@@ -11,7 +11,7 @@
       <a href="/music.html"{% if page.section == "music" %} aria-current="page"{% endif %}>Music</a>
       <a href="/events.html"{% if page.section == "events" %} aria-current="page"{% endif %}>Events</a>
       <a href="/production.html"{% if page.section == "production" %} aria-current="page"{% endif %}>Production</a>
-      <a href="/stage-command.html"{% if page.section == "stage-command" %} aria-current="page"{% endif %}>Stage Command</a>
+      <a href="/software.html"{% if page.section == "software" %} aria-current="page"{% elsif page.section == "stage-command" or page.section == "jbl-command" %} aria-current="true"{% endif %}>Software</a>
     </nav>
   </div>
 </header>
