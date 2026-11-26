@@ -4,3 +4,6 @@ plugins:
 theme: jekyll-theme-hacker
 title: Jungle Book Legion
 description: base domain, check out our github
+
+exclude:
+  - README.md
